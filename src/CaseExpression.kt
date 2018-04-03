@@ -16,19 +16,21 @@ fun main(args: Array<String>) {
 
 }
 
-fun describe(obj: Any): String = when (obj) {
-    1 -> "one"
-    "Hello" -> "Greeting"
-    is Long -> "Long"
-    !is String -> "not a string"
-    else -> "Unknown"
-}
+fun describe(obj: Any): String =
+        when (obj) {
+            1 -> "one"
+            "Hello" -> "Greeting"
+            is Long -> "Long"
+            !is String -> "not a string"
+            else -> "Unknown"
+        }
 
-fun describe_2(obj: Any): Any = when (obj) {
-    1 -> "one"
-    "2" -> "tow"
-    is Boolean -> "true"
-    else -> "else 原路返回:${obj}"
-}
+fun describe_2(obj: Any): Any =
+        when (obj) {
+            1 -> "one"
+            "2" -> "tow"
+            is Boolean -> "true"
+            else -> "else 原路返回:${obj}"
+        }
 
 
